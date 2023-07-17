@@ -1,0 +1,62 @@
+.head {
+    width: 50px;
+    height: 50px;
+    border: 10px solid black;
+    border-radius: 100%;
+    position: absolute;
+    top: 49px;
+    right: -30px;
+}
+
+.body {
+    width: 10px;
+    height: 100px;
+    background: black;
+    position: absolute;
+    top: 118px;
+    right: 0px;
+}
+
+.rightArm {
+    width: 100px;
+    height: 10px;
+    background: black;
+    position: absolute;
+    top: 150PX;
+    right: -100px;
+    rotate: -30deg;
+    transform-origin: bottom left;
+}
+
+.leftArm {
+    width: 100px;
+    height: 10px;
+    background: black;
+    position: absolute;
+    top: 150PX;
+    right: 10px;
+    rotate: 30deg;
+    transform-origin: right bottom;
+}
+
+.rightLeg {
+    width: 100px;
+    height: 10px;
+    background: black;
+    position: absolute;
+    top: 210PX;
+    right: 0px;
+    rotate: -30deg;
+    transform-origin: right bottom;
+}
+
+.leftLeg {
+    width: 100px;
+    height: 10px;
+    background: black;
+    position: absolute;
+    top: 210PX;
+    right: -90px;
+    rotate: 30deg;
+    transform-origin: left bottom;
+}
