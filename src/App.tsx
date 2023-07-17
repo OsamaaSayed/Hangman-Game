@@ -17,8 +17,7 @@ function App() {
 
   return (
     <div className="container">
-
-        <h2>Lose Win</h2>
+      <h2>Lose Win</h2>
 
       <HangmanDrawing />
       <HangmanWord />
