@@ -4,6 +4,7 @@ type KeyboardProps = {
   activeLetters: string[];
   inActiveLetters: string[];
   addGuessedLetter: (letter: string) => void;
+  disabled:boolean
 };
 
 const KEYS = [
@@ -39,8 +40,9 @@ const Keyboard = ({
   activeLetters,
   inActiveLetters,
   addGuessedLetter,
+  disabled
 }: KeyboardProps) => {
-  console.log("keyboard render");
+
 
   return (
     <div className={styles.container}>
@@ -53,7 +55,7 @@ const Keyboard = ({
             className={`${styles.btn}
                ${isActive ? styles.active : ""}
               ${isInActive ? styles.inactive : ""} `}
-            disabled={isActive || isInActive}
+            disabled={isActive || isInActive || disabled}
             key={key}
           >
             {key}
