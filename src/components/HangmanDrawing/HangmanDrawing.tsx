@@ -14,6 +14,8 @@ const LEFT_LEG = <div className={styles.leftLeg} />;
 const BODY_PARTS = [HEAD, BODY, RIGHT_ARM, LEFT_ARM, RIGHT_LEG, LEFT_LEG];
 
 const HangmanDrawing = ({ numberOfGuesses }: HangmanDrawingProps) => {
+  console.log('Drawing render');
+  
   return (
     <div style={{ position: "relative" }}>
       {BODY_PARTS.slice(0, numberOfGuesses)}

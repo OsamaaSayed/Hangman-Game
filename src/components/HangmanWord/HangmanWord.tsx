@@ -6,6 +6,8 @@ type HangmanWordProps = {
 };
 
 const HangmanWord = ({ wordToGuess, guessedLetters }: HangmanWordProps) => {
+  console.log('Word render');
+  
   return (
     <div className={styles.container}>
       {wordToGuess.split("").map((letter, index) => (

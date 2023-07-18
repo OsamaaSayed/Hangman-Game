@@ -1,5 +1,11 @@
 import styles from "./Keyboard.module.css";
 
+type KeyboardProps = {
+  activeLetters: string[];
+  inActiveLetters: string[];
+  addGuessedLetter: (letter: string) => void;
+};
+
 const KEYS = [
   "a",
   "b",
@@ -29,14 +35,31 @@ const KEYS = [
   "z",
 ];
 
-const Keyboard = () => {
+const Keyboard = ({
+  activeLetters,
+  inActiveLetters,
+  addGuessedLetter,
+}: KeyboardProps) => {
+  console.log("keyboard render");
+
   return (
     <div className={styles.container}>
-      {KEYS.map((key) => (
-        <button className={styles.btn} key={key}>
-          {key}
-        </button>
-      ))}
+      {KEYS.map((key) => {
+        const isActive = activeLetters.includes(key);
+        const isInActive = inActiveLetters.includes(key);
+        return (
+          <button
+            onClick={() => addGuessedLetter(key)}
+            className={`${styles.btn}
+               ${isActive ? styles.active : ""}
+              ${isInActive ? styles.inactive : ""} `}
+            disabled={isActive || isInActive}
+            key={key}
+          >
+            {key}
+          </button>
+        );
+      })}
     </div>
   );
 };
